@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorry Card</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 400px;
+      animation: pop 1s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .teddy {
+      margin: 0 auto 20px;
+      width: 200px;
+      height: 230px;
+      position: relative;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Teddy parts */
+    .ear, .ear::after {
+      width: 60px;
+      height: 60px;
+      background: #ffd966;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+    }
+
+    .ear.left { left: -20px; }
+    .ear.right { right: -20px; }
+
+    .head {
+      width: 150px;
+      height: 150px;
+      background: #ffeb99;
+      border-radius: 50%;
+      margin: 0 auto;
+      position: relative;
+      border: 5px solid #ffd966;
+    }
+
+    .eye {
+      width: 20px;
+      height: 20px;
+      background: #000;
+      border-radius: 50%;
+      position: absolute;
+      top: 45px;
+    }
+
+    .eye.left { left: 35px; }
+    .eye.right { right: 35px; }
+
+    .nose {
+      width: 30px;
+      height: 20px;
+      background: #000;
+      border-radius: 50%;
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .mouth {
+      width: 60px;
+      height: 30px;
+      border-bottom: 5px solid #000;
+      border-radius: 0 0 50% 50%;
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .body {
+      width: 120px;
+      height: 120px;
+      background: #ffeb99;
+      border-radius: 50%;
+      margin: -30px auto 0;
+      position: relative;
+      border: 5px solid #ffd966;
+    }
+
+    .hand {
+      width: 50px;
+      height: 50px;
+      background: #ffeb99;
+      border: 5px solid #ffd966;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      animation: wave 2s infinite ease-in-out;
+    }
+
+    .hand.left {
+      left: -40px;
+      transform-origin: top right;
+    }
+
+    .hand.right {
+      right: -40px;
+    }
+
+    @keyframes wave {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(-25deg); }
+    }
+
+    .sorry-text {
+      font-size: 2em;
+      font-weight: bold;
+      color: #d63384;
+      margin: 15px 0;
+    }
+
+    .quote {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    iframe {
+      border-radius: 12px;
+      width: 100%;
+      height: 152px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="teddy">
+      <div class="ear left"></div>
+      <div class="ear right"></div>
+      <div class="head">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="body">
+        <div class="hand left"></div>
+        <div class="hand right"></div>
+      </div>
+    </div>
+
+    <div class="sorry-text">I’m Really Sorry 💖</div>
+    <div class="quote">"Sometimes saying sorry is the bravest thing you can do to protect love."</div>
+
+    <!-- Spotify Embed (replace with your song link) -->
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2QNU1aSZwHbdlVGK6IrX8V?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</body>
+</html>
